@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: web-service
+
+resources:
+  - namespace.yaml
+  - fastapi-deployment.yaml
+  - fastapi-service.yaml
+  - nginx-configmap.yaml
+  - nginx-deployment.yaml
+  - nginx-service.yaml
+
+labels:
+  - pairs:
+      app.kubernetes.io/part-of: infra-test-web-service
+
+images:
+  - name: web-service-api
+    newName: ghcr.io/ktcloud4-acer/web-service-api
+    newTag: 526bccd17263ab66e24c4faf86b41c02bcb7e515

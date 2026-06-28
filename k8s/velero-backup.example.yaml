@@ -1,0 +1,9 @@
+apiVersion: velero.io/v1
+kind: Backup
+metadata:
+  name: web-service-manual-backup
+  namespace: velero
+spec:
+  includedNamespaces:
+    - web-service
+  snapshotVolumes: false

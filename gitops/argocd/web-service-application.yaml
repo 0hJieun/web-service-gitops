@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: web-service
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: web-service
+    app.kubernetes.io/part-of: infra-test-web-service
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/0hJieun/web-service-gitops.git
+    targetRevision: main
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: web-service
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
