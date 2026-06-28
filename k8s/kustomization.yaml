@@ -17,5 +17,5 @@ labels:
 
 images:
   - name: web-service-api
-    newName: ghcr.io/ktcloud4-acer/web-service-api
-    newTag: 526bccd17263ab66e24c4faf86b41c02bcb7e515
+    newName: web-service-api
+    newTag: "0601374208fa23b713b7328f58d7fcfb6fb8ff3c"
