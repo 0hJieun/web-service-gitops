@@ -1,0 +1,8 @@
+# 팀 시크릿 정책 반영 (git 평문 커밋 금지 대상)
+passwords.yml
+admin-openrc.sh
+clouds.yaml
+*.pem
+*.tfstate
+*.tfstate.backup
+kubeconfig
