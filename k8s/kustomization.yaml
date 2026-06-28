@@ -17,5 +17,5 @@ labels:
 
 images:
   - name: web-service-api
-    newName: web-service-api
-    newTag: "0601374208fa23b713b7328f58d7fcfb6fb8ff3c"
+    newName: docker.io/jieun3113/web-service-api
+    newTag: "c6f6d5aca805aeafec0e47dc7f69b807f713a810"
